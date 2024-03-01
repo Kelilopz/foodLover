@@ -8,8 +8,11 @@
  header{
     /* background: red; */
     width:100%;
-    height: 100px;
-    position: relative;
+    height: 120px;
+    position: sticky;
+    top: -10px;
+    background-image: linear-gradient(var(--color-banner),var(--color-banner));
+    
 } 
 .menu{
     /* background: yellow; */
@@ -41,9 +44,16 @@
     color: var(--color-font);
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: bold;
     font-style: normal;
+    transition: all 0.3s ease-in-out;
 }
+
+.menu__item3 li a:hover, 
+.menu__item1 li a:hover{
+    color: var(--color-primary);
+}
+
 .menu__item2{
     /* background: orange; */
     display: inline-block;
@@ -72,18 +82,125 @@
     /* background: blue; */
     width: 100%;
     height: 100vh;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -100px;
     z-index: -1;
     background-image: linear-gradient(var(--color-banner),var(--color-banner)), url(../storage/img/placeYourImageHere0.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.imagen__centro{
+.home article:first-child,
+.home article:last-child{
+    display: inline-block;
+    width: 49%;
+    height: 500px;
+    position: absolute;
+    bottom: 200px;
+
+}
+
+.home article:first-child{
+    /*overflow:hidden;*/
+    text-align: center;
+}
+
+.home article:first-child img{
+    width: 90%;    
+    height: 100%;
+    object-fit: scale-down;
+
+}
+
+.home article:last-child{
+    /*background: blue;*/
+    right: 0;
+   
+}
+.card{
+    width: 75%;
+    /*background: red;*/
+    margin-top: 55px;
+
+}
+
+.card h1{
+    color: var(--color-primary);
+    font-size: 65px;
+    line-height: 75px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+.card p{
+    color: var(--color-font);
+    font-size: 25px;
+    height: 100px;
+   /*background: violet;*/
+    overflow: hidden;
+    margin-top: 15px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.card button{
+    background-color: var(--color-primary);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 25px;
+    height: 85px;
+    border:none;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    cursor  : pointer;
+    transition: all 0.1s ease-in-out;
+    
+}
+
+.card button:hover{
+    color:var(--color-font)
+    box-shadow: 3px 3px 10px var(--color-primary) ;
+}
+
+.about{
+    background: var(--color-secundary);
     position: relative;
-    margin-top: 150px;
-    right: -11%;
+    width: 100%;
+    height: 2000px;
+    margin-top: 20px;
+    top: -120px;
+    z-index: -1;
+}
 
 
+.about article:first-child,
+.about article:last-child{
+    margin-top: 60px;
+    display: inline-block;
+    width: 55%;
+    height: 500px;
+    position: absolute;
+}
+
+.about article:first-child{
+    width: 45%;
+
+    text-align: center;
+}
+
+.about article:first-child img {
+
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.about article:last-child{
+   
+    right: 0;
 }
